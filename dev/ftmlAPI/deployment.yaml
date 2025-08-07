@@ -23,6 +23,6 @@ spec:
           value: "secret from argo"
       envFrom:
         - configMapRef:
-            name: ftml-api-configmap
-          - secretRef:
-              name: ftml-api-secrets
+            name: ftml-api
+        - secretRef:
+            name: ftml-api
