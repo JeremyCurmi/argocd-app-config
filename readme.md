@@ -25,6 +25,7 @@ kubectl apply -f application.yaml
 # Deploying datascience etl via argo cd
 
 ```bash
+kubectl apply -f applications/simpleAPP.yaml
 kubectl apply -f applications/ftmlAPI.yaml
 kubectl apply -f applications/datascienceETL.yaml
 ```
