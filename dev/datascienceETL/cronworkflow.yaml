@@ -1,0 +1,50 @@
+apiVersion: argoproj.io/v1alpha1
+kind: CronWorkflow
+metadata:
+  name: datascience-etl-workflow
+  namespace: testbrand
+spec:
+  schedule: "*/2 * * * *"
+  workflowSpec:
+    entrypoint: main
+    templates:
+      - name: main
+        dag:
+          tasks:
+            - name: task1
+              template: task1
+            - name: task2
+              template: task2
+            - name: task3
+              template: task3
+              dependencies: [task1]
+
+      - name: task1
+        container:
+          image: jman081894/datascience-etl-workflow:latest
+          command: ["python", "task1.py"]
+          envFrom:
+            - configMapRef:
+                name: datascience-etl
+            - secretRef:
+                name: datascience-etl
+
+      - name: task2
+        container:
+          image: jman081894/datascience-etl-workflow:latest
+          command: ["python", "task2.py"]
+          envFrom:
+            - configMapRef:
+                name: datascience-etl
+            - secretRef:
+                name: datascience-etl
+
+      - name: task3
+        container:
+          image: jman081894/datascience-etl-workflow:latest
+          command: ["python", "task2.py"]
+          envFrom:
+            - configMapRef:
+                name: datascience-etl
+            - secretRef:
+                name: datascience-etl
