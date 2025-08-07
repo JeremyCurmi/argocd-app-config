@@ -18,11 +18,11 @@ spec:
           image: jman081894/go-workflow:2
           ports:
             - containerPort: 8080
-      env:
-        - name: SK_1
-          value: "secret from argo"
-      envFrom:
-        - configMapRef:
-            name: ftml-api
-        - secretRef:
-            name: ftml-api
+          env:
+            - name: SK_1
+              value: "secret from argo"
+          envFrom:
+            - configMapRef:
+                name: ftml-api
+            - secretRef:
+                name: ftml-api
