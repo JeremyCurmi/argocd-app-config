@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: datascience-etl-configmap
-  namespace: argo
+  namespace: testbrand
 data:
   ENV: "production"
   BRAND: "testbrand"

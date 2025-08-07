@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:JeremyCurmi/argocd-app-config.git
+    repoURL: https://github.com/JeremyCurmi/argocd-app-config.git
     targetRevision: HEAD # lastest commit
     path: dev/datascienceETL
   destination:
