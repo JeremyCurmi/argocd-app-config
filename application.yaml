@@ -16,7 +16,7 @@ spec:
     syncOptions:
       - CreateNamespace=true # create namespace if it doesn't exist
 
-    automated: 
-      selfHeal:true # will automatically sync the changes to the cluster (even when you do manual changes)
+    automated:
+      selfHeal: true # will automatically sync the changes to the cluster (even when you do manual changes)
       prune: true # delete resources that are not in the app
 
