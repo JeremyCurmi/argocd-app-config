@@ -21,3 +21,9 @@ To setup argo application.yaml
 ```bash
 kubectl apply -f application.yaml
 ```
+
+# Deploying datascience etl via argo cd
+
+```bash
+kubectl apply -f applications/datascienceETL.yaml
+```
