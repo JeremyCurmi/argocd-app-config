@@ -26,4 +26,5 @@ kubectl apply -f application.yaml
 
 ```bash
 kubectl apply -f applications/ftmlAPI.yaml
+kubectl apply -f applications/datascienceETL.yaml
 ```
