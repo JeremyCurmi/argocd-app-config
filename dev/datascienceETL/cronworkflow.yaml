@@ -21,7 +21,7 @@ spec:
 
       - name: task1
         container:
-          image: jman081894/datascience-etl-workflow:latest
+          image: jman081894/datascience-etl-session-activity-workflow:latest
           command: ["python", "task1.py"]
           envFrom:
             - configMapRef:
@@ -31,7 +31,7 @@ spec:
 
       - name: task2
         container:
-          image: jman081894/datascience-etl-workflow:latest
+          image: jman081894/datascience-etl-session-activity-workflow:latest
           command: ["python", "task2.py"]
           envFrom:
             - configMapRef:
@@ -41,7 +41,7 @@ spec:
 
       - name: task3
         container:
-          image: jman081894/datascience-etl-workflow:latest
+          image: jman081894/datascience-etl-session-activity-workflow:latest
           command: ["python", "task2.py"]
           envFrom:
             - configMapRef:
