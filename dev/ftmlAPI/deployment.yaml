@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftml-api
+  namespace: testbrand
+spec:
+  selector:
+    matchLabels:
+      app: ftml-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ftml-api
+    spec:
+      containers:
+        - name: ftml-api
+          image: jman081894/go-workflow:1
+          ports:
+            - containerPort: 8080
+      env:
+        - name: SK_1
+          value: "secret from argo"
+      envFrom:
+        - configMapRef:
+            name: ftml-api-configmap
+          - secretRef:
+              name: ftml-api-secrets

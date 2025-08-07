@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: datascience-etl-configmap
+  name: ftml-api-configmap
   namespace: testbrand
 data:
   ENV: "production"
